@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TopDownMovement : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class TopDownMovement : MonoBehaviour
     private Rigidbody2D movementRigidbody;
 
     private Vector2 movementDirection = Vector2.zero; //초기값은 제로.
+    private Vector2 mouseDirection = Vector2.zero;
     private Transform tf;
 
     private void Awake() //(Awake)주로 내 컴포넌트안에서 끝나는 것을 정의
@@ -23,13 +25,17 @@ public class TopDownMovement : MonoBehaviour
     {
         // OnMoveEvent에 Move를 호출하라고 등록함
         movementController.OnMoveEvent += Move;
+    }
+
+    private void Update()
+    {
         movementController.OnLookEvent += Look;
     }
 
     private void FixedUpdate() //물리업데이트와 관련이 있는 FixedUpdate
     {
         // 물리 업데이트에서 움직임 적용(rigidbody의 값을 변경)
-        ApplyMovement(movementDirection); 
+        ApplyMovement(movementDirection);
     }
 
     private void Move(Vector2 direction)
@@ -45,6 +51,7 @@ public class TopDownMovement : MonoBehaviour
 
         movementRigidbody.velocity = direction;
     }
+
 
     private void Look(Vector2 direction)
     {
