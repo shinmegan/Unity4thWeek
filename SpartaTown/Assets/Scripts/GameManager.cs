@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject joinImage;
     public GameObject joinButton;
+    public GameObject reminder;
     public InputField playerNameInput;
 
     private void Awake()
@@ -25,16 +27,25 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 플레이어 이름이 2자 이상이고 joinButton이 비활성화 상태일 때
-        if (playerNameInput.text.Length >= 2 && !joinButton.activeSelf)
+        // 플레이어 이름이 2자 이상이고 joinImage이 비활성화 상태일 때
+        if (playerNameInput.text.Length >= 2 && !joinImage.activeSelf)
         {
-            joinButton.SetActive(true); // joinButton을 활성화합니다.
+            joinImage.SetActive(true); // joinImage 활성화
+            joinButton.SetActive(true);// joinButton 활성화
+            reminder.SetActive(false); // 안내문 비활성화
         }
         // 플레이어 이름이 2자 미만이거나 joinButton이 활성화 상태일 때
-        else if (playerNameInput.text.Length < 2 && joinButton.activeSelf)
+        else if (playerNameInput.text.Length < 2 && joinImage.activeSelf)
         {
-            joinButton.SetActive(false); // joinButton을 비활성화합니다.
+            joinImage.SetActive(false); // joinImage 비활성화
+            joinButton.SetActive(false) ;
         }
+        else if (playerNameInput.text.Length == 1)
+        {
+            reminder.SetActive(true); //안내문 활성화
+        }
+        else
+            reminder.SetActive(false);
     }
 
     public void InputName()
@@ -43,6 +54,5 @@ public class GameManager : MonoBehaviour
         //이름 저장
         //PlayerPrefs.SetString("CurrentPlayerName", playerName);
         //버튼 이미지 활성화
-        
     }
 }
