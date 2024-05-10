@@ -1,16 +1,16 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TopDownController : MonoBehaviour
 {
-    public event Action<Vector2> OnMoveEvent; //ActionÀº ¹«Á¶°Ç void¸¸ ¹İÈ¯ÇØ¾ßÇÔ(¾Æ´Ï¸é Func»ç¿ë)
-    public event Action<Vector2> OnLookEvent; //¸¶¿ì½º
+    public event Action<Vector2> OnMoveEvent; //Actionì€ ë¬´ì¡°ê±´ voidë§Œ ë°˜í™˜í•´ì•¼í•¨(ì•„ë‹ˆë©´ Funcì‚¬ìš©)
+    public event Action<Vector2> OnLookEvent; //ë§ˆìš°ìŠ¤
 
     public void CallMoveEvent(Vector2 direction)
     {
-        OnMoveEvent?.Invoke(direction); //?. ¾øÀ¸¸é ¸»°í, ÀÖÀ¸¸é ½ÇÇà
+        OnMoveEvent?.Invoke(direction); //? : ì—†ìœ¼ë©´ ë§ê³ , ìˆìœ¼ë©´ ì‹¤í–‰
     }
 
     public void CallLookEvent(Vector2 direction)

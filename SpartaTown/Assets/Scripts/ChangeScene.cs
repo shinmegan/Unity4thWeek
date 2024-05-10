@@ -1,13 +1,15 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    //¸ŞÀÎ¾ÀÀ¸·Î ÀÌµ¿ ¸Ş¼­µå
+    //ë©”ì¸ì”¬ìœ¼ë¡œ ì´ë™ ë©”ì„œë“œ
     public void ChangeIntoMainScene()
     {
         SceneManager.LoadScene("MainScene");
+        //ì´ë¦„ ì €ì¥ ë©”ì†Œë“œ ì‹¤í–‰
+        GameManager.instance.InputName();
     }
 }

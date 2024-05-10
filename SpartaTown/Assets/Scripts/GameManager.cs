@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject joinButton;
     public GameObject reminder;
     public InputField playerNameInput;
+    string playerName;
 
     private void Awake()
     {
@@ -27,22 +28,22 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ÇÃ·¹ÀÌ¾î ÀÌ¸§ÀÌ 2ÀÚ ÀÌ»óÀÌ°í joinImageÀÌ ºñÈ°¼ºÈ­ »óÅÂÀÏ ¶§
+        // í”Œë ˆì´ì–´ ì´ë¦„ì´ 2ì ì´ìƒì´ê³  joinImageì´ ë¹„í™œì„±í™” ìƒíƒœì¼ ë•Œ
         if (playerNameInput.text.Length >= 2 && !joinImage.activeSelf)
         {
-            joinImage.SetActive(true); // joinImage È°¼ºÈ­
-            joinButton.SetActive(true);// joinButton È°¼ºÈ­
-            reminder.SetActive(false); // ¾È³»¹® ºñÈ°¼ºÈ­
+            joinImage.SetActive(true); // joinImage í™œì„±í™”
+            joinButton.SetActive(true);// joinButton í™œì„±í™”
+            reminder.SetActive(false); // ì•ˆë‚´ë¬¸ ë¹„í™œì„±í™”
         }
-        // ÇÃ·¹ÀÌ¾î ÀÌ¸§ÀÌ 2ÀÚ ¹Ì¸¸ÀÌ°Å³ª joinButtonÀÌ È°¼ºÈ­ »óÅÂÀÏ ¶§
+        // í”Œë ˆì´ì–´ ì´ë¦„ì´ 2ì ë¯¸ë§Œì´ê±°ë‚˜ joinButtonì´ í™œì„±í™” ìƒíƒœì¼ ë•Œ
         else if (playerNameInput.text.Length < 2 && joinImage.activeSelf)
         {
-            joinImage.SetActive(false); // joinImage ºñÈ°¼ºÈ­
+            joinImage.SetActive(false); // joinImage ë¹„í™œì„±í™”
             joinButton.SetActive(false) ;
         }
         else if (playerNameInput.text.Length == 1)
         {
-            reminder.SetActive(true); //¾È³»¹® È°¼ºÈ­
+            reminder.SetActive(true); //ì•ˆë‚´ë¬¸ í™œì„±í™”
         }
         else
             reminder.SetActive(false);
@@ -50,9 +51,7 @@ public class GameManager : MonoBehaviour
 
     public void InputName()
     {
-        //playerName = playerNameInput.text;
-        //ÀÌ¸§ ÀúÀå
-        //PlayerPrefs.SetString("CurrentPlayerName", playerName);
-        //¹öÆ° ÀÌ¹ÌÁö È°¼ºÈ­
+        playerName = playerNameInput.text;
+        PlayerPrefs.SetString("CurrentPlayerName", playerName);
     }
 }
