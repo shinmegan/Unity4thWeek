@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class TopDownMovement : MonoBehaviour
@@ -21,8 +21,7 @@ public class TopDownMovement : MonoBehaviour
     }
 
     private void Start()
-    {
-        // OnMoveEvent에 Move를 호출하라고 등록함
+    {   // OnMoveEvent에 Move를 호출하라고 등록함
         movementController.OnMoveEvent += Move;
     }
 
@@ -34,7 +33,8 @@ public class TopDownMovement : MonoBehaviour
     private void FixedUpdate() 
     {
         // 물리 업데이트에서 움직임 적용(rigidbody의 값을 변경)
-        ApplyMovement(movementDirection);
+        if(UIManager.instance.allowMovement)
+            ApplyMovement(movementDirection);
     }
 
     private void Move(Vector2 direction)
@@ -46,7 +46,7 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 4;
+        direction = direction * 5;
         movementRigidbody.velocity = direction;
     }
 

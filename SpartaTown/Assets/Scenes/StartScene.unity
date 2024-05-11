@@ -219,6 +219,7 @@ MonoBehaviour:
   joinButton: {fileID: 891634580}
   reminder: {fileID: 60676091}
   playerNameInput: {fileID: 776203735}
+  color: none
 --- !u!1 &118439537
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,13 +638,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 776203736}
   m_TextComponent: {fileID: 1072622388}
   m_Placeholder: {fileID: 1033580394}
-  m_ContentType: 5
+  m_ContentType: 0
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 6
+  m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 4
+  m_CharacterValidation: 0
   m_CharacterLimit: 10
   m_OnSubmit:
     m_PersistentCalls:
@@ -716,6 +717,7 @@ MonoBehaviour:
   joinButton: {fileID: 891634580}
   reminder: {fileID: 60676091}
   playerNameInput: {fileID: 776203735}
+  color: none
 --- !u!1 &891634580
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +774,7 @@ MonoBehaviour:
   joinButton: {fileID: 891634580}
   reminder: {fileID: 60676091}
   playerNameInput: {fileID: 776203735}
+  color: none
 --- !u!114 &891634583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,7 +794,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1087,7 +1090,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1353,6 +1356,7 @@ MonoBehaviour:
   joinButton: {fileID: 891634580}
   reminder: {fileID: 60676091}
   playerNameInput: {fileID: 776203735}
+  color: none
 --- !u!4 &1090540197
 Transform:
   m_ObjectHideFlags: 0
@@ -1609,7 +1613,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1742,7 +1746,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1959,6 +1963,7 @@ MonoBehaviour:
   joinButton: {fileID: 891634580}
   reminder: {fileID: 60676091}
   playerNameInput: {fileID: 776203735}
+  color: none
 --- !u!114 &1942458920
 MonoBehaviour:
   m_ObjectHideFlags: 0
