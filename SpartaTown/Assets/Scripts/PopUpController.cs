@@ -32,11 +32,7 @@ public class PopUpController : MonoBehaviour
     //블루선택시 블루 캐릭터 활성화 메서드
     public void PickBlue()
     {
-        popUpImage.SetActive(false);
-        playerNameInput.SetActive(true);
-        popUpBtn.SetActive(true);
-        bluePickBtn.SetActive(false);
-        pinkPickBtn.SetActive(false);
+        ClosePopUp();
         blueProfile.SetActive(true);
         pinkProfile.SetActive(false);
     }
@@ -44,12 +40,18 @@ public class PopUpController : MonoBehaviour
     //핑크선택시 핑크 캐릭터 활성화 메서드
     public void PickPink()
     {
+        ClosePopUp();
+        blueProfile.SetActive(false);
+        pinkProfile.SetActive(true);
+    }
+
+    //선택창 닫는 메서드
+    void ClosePopUp()
+    {
         popUpImage.SetActive(false);
         playerNameInput.SetActive(true);
         popUpBtn.SetActive(true);
         bluePickBtn.SetActive(false);
         pinkPickBtn.SetActive(false);
-        blueProfile.SetActive(false);
-        pinkProfile.SetActive(true);
     }
 }
