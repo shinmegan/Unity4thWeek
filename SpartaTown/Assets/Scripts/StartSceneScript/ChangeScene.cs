@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,5 +11,7 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("MainScene");
         //이름 저장 메소드 실행
         GameManager.instance.InputName();
+        //캐릭터 색상 저장 메소드 실행
+        GameManager.instance.ChosenCharacter();
     }
 }

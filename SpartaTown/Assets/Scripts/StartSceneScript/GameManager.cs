@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject reminder;
     public InputField playerNameInput;
     string playerName;
+    public string color = "none";
 
     private void Awake()
     {
@@ -19,13 +20,12 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
-    // Start is called before the first frame update
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         // 플레이어 이름이 2자 이상이고 joinImage이 비활성화 상태일 때
@@ -53,5 +53,10 @@ public class GameManager : MonoBehaviour
     {
         playerName = playerNameInput.text;
         PlayerPrefs.SetString("CurrentPlayerName", playerName);
+    }
+
+    public void ChosenCharacter()
+    {
+        PlayerPrefs.SetString("SelectedCharacterColor", color); // 선택한 캐릭터 색상을 저장
     }
 }

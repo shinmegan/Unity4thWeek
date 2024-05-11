@@ -35,6 +35,7 @@ public class PopUpController : MonoBehaviour
         ClosePopUp();
         blueProfile.SetActive(true);
         pinkProfile.SetActive(false);
+        GameManager.instance.color = "blue";
     }
 
     //핑크선택시 핑크 캐릭터 활성화 메서드
@@ -43,6 +44,7 @@ public class PopUpController : MonoBehaviour
         ClosePopUp();
         blueProfile.SetActive(false);
         pinkProfile.SetActive(true);
+        GameManager.instance.color = "pink";
     }
 
     //선택창 닫는 메서드
