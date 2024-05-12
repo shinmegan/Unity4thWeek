@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public Text attendList;
     public GameObject blueBox;
     public GameObject pinkBox;
+    public GameObject bellBtn;
     string playername;
     string selectedCharacter;
     public bool allowMovement = true;
