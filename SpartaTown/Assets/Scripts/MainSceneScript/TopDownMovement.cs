@@ -60,13 +60,13 @@ public class TopDownMovement : MonoBehaviour
             // 마우스의 x좌표가 캐릭터의 x좌표보다 작으면 좌측을 바라봄
             tf.localScale = new Vector2(-1,1);
             // 캐릭터의 이름도 좌측으로 반전
-            UIManager.instance.nameTxt.rectTransform.localScale = new Vector2(-1, 1);
+            UIManager.instance.playerNameTxt.rectTransform.localScale = new Vector2(-1, 1);
         }
         else if (mousePosition.x > tf.position.x)
         {
             // 마우스의 x좌표가 캐릭터의 x좌표보다 크면 우측을 바라봄
             tf.localScale = new Vector2(1,1);
-            UIManager.instance.nameTxt.rectTransform.localScale = new Vector2(1, 1);
+            UIManager.instance.playerNameTxt.rectTransform.localScale = new Vector2(1, 1);
         }
     }
 }

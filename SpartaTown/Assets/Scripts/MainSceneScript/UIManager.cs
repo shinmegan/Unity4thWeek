@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-    public Text nameTxt;
+    public Text playerNameTxt;
+    public Text wizardNameTxt;
     public Text attendList;
     public GameObject blueBox;
     public GameObject pinkBox;
@@ -40,8 +41,9 @@ public class UIManager : MonoBehaviour
     //선택된 이름 적용 메서드
     void ApplyName(string name)
     {
-        nameTxt.text = name;
-        attendList.text = name;
+        playerNameTxt.text = name;
+        attendList.text = wizardNameTxt.text;
+        attendList.text += "\n" + name;
     }
 
     //선택된 캐릭터로 변경 메서드
