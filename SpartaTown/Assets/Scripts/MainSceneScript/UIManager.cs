@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     public Text nameTxt;
+    public Text attendList;
     public GameObject blueBox;
     public GameObject pinkBox;
     string playername;
@@ -40,6 +41,7 @@ public class UIManager : MonoBehaviour
     void ApplyName(string name)
     {
         nameTxt.text = name;
+        attendList.text = name;
     }
 
     //선택된 캐릭터로 변경 메서드
