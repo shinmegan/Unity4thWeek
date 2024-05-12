@@ -17,6 +17,9 @@ public class PopUpManager : MonoBehaviour
     public GameObject letterReminder;
     public InputField NameInput;
     string changedName;
+    //PopUpImage 프리팹을 인스턴스화할 변수
+    public GameObject popUpPrefab;
+    public GameObject characterBtn;
 
     private void Awake()
     {
@@ -89,5 +92,12 @@ public class PopUpManager : MonoBehaviour
         attendImage.SetActive(false);
         attendTitle.SetActive(false);
         xBtn.SetActive(false);
+    }
+
+    //캐릭터 선택창 띄우는 메서드
+    public void OpenPopUp()
+    {
+        // 프리팹을 현재 위치와 회전으로 인스턴스화
+        Instantiate(popUpPrefab, transform.position, transform.rotation);
     }
 }
